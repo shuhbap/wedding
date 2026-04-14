@@ -2,15 +2,31 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Wedding Details</title>
+<title>Final</title>
 
 <style>
-body{background:black;color:white;font-family:Poppins;text-align:center;padding:50px}
+body{
+  background:black;
+  color:white;
+  font-family:Poppins;
+  text-align:center;
+  padding:50px;
+}
+
 .gold{color:#d4af37}
+
+.fade{
+  animation:fade 2s ease;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1}
+}
 </style>
 </head>
 
-<body>
+<body class="fade">
 
 <h1 class="gold">Thank You ❤️</h1>
 
