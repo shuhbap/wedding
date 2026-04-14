@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Wedding Details</title>
+
+<style>
+body{background:black;color:white;font-family:Poppins;text-align:center;padding:50px}
+.gold{color:#d4af37}
+</style>
+</head>
+
+<body>
+
+<h1 class="gold">Thank You ❤️</h1>
+
+<p>Date: 11/10/2026</p>
+<p>Location: Perumbilav</p>
+<p>Contact: 9999999999</p>
+
+<h2>Countdown</h2>
+<div id="count"></div>
+
+<script>
+let d=new Date("Oct 11, 2026").getTime();
+setInterval(()=>{
+let n=new Date().getTime();
+let diff=d-n;
+let days=Math.floor(diff/(1000*60*60*24));
+document.getElementById('count').innerText=days+" days left";
+},1000);
+</script>
+
+</body>
+</html>
