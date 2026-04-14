@@ -1,23 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Afzal & Ayisha Wedding</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;background:#0f0f0f;color:white;font-family:Poppins;text-align:center}
-.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;background:url('https://images.unsplash.com/photo-1519741497674-611481863552') center/cover}
-h1{font-family:Great Vibes;font-size:70px;color:#d4af37}
+body{
+  margin:0;
+  background:#0a0a0a;
+  color:white;
+  font-family:Poppins;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+  url('https://images.unsplash.com/photo-1519741497674-611481863552') center/cover;
+  animation:fade 2s ease;
+}
+
+h1{
+  font-family:Great Vibes;
+  font-size:80px;
+  color:#d4af37;
+}
+
 .gold{color:#d4af37}
-.btn{padding:15px 30px;margin:10px;border:none;border-radius:30px;background:#d4af37;color:black;cursor:pointer}
-.box{display:inline-block;background:#000;padding:10px;margin:5px;border-radius:10px}
+
+.btn{
+  padding:15px 30px;
+  margin:10px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(45deg,#d4af37,#f5e6a3);
+  color:black;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 20px #d4af37;
+}
+
+.box{
+  display:inline-block;
+  padding:10px;
+  margin:5px;
+  background:#000;
+  border-radius:10px;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1}
+}
 </style>
 </head>
 
 <body>
+
+<!-- MUSIC -->
+<audio autoplay loop>
+  <source src="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav">
+</audio>
 
 <div class="hero">
   <h1>Afzal & Ayisha</h1>
@@ -40,8 +94,13 @@ h1{font-family:Great Vibes;font-size:70px;color:#d4af37}
 </div>
 
 <script>
-function scrollDown(){window.scrollTo({top:window.innerHeight,behavior:'smooth'})}
-function go(){window.location='rsvp.html'}
+function scrollDown(){
+  window.scrollTo({top:window.innerHeight,behavior:'smooth'})
+}
+
+function go(){
+  window.location='rsvp.html'
+}
 
 let d=new Date("Oct 11, 2026").getTime();
 setInterval(()=>{
