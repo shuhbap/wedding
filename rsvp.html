@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RSVP</title>
+
+<style>
+body{background:#0f0f0f;color:white;font-family:Poppins;text-align:center}
+.card{margin-top:100px}
+.count{font-size:50px}
+.btn{padding:10px 20px;margin:10px;border:none;border-radius:10px;background:#d4af37;color:black}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>How many from your family?</h2>
+
+  <button class="btn" onclick="dec()">-</button>
+  <span id="count" class="count">1</span>
+  <button class="btn" onclick="inc()">+</button>
+
+  <br>
+  <button class="btn" onclick="next()">Submit</button>
+</div>
+
+<script>
+let c=1;
+function inc(){c++;document.getElementById('count').innerText=c}
+function dec(){if(c>1){c--;document.getElementById('count').innerText=c}}
+function next(){window.location='final.html'}
+</script>
+
+</body>
+</html>
