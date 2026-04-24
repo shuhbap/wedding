@@ -1,35 +1,66 @@
 body {
   margin: 0;
-  background: black;
+  font-family: 'Playfair Display', serif;
   color: white;
-  font-family: serif;
+
+  /* 🎬 Cinematic Background */
+  background: linear-gradient(
+      rgba(0,0,0,0.7),
+      rgba(0,0,0,0.9)
+    ),
+    url('https://images.unsplash.com/photo-1519741497674-611481863552') no-repeat center center/cover;
+
+  height: 100vh;
+  background-attachment: fixed;
 }
 
+/* Center content */
 .center {
   text-align: center;
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
+/* Gold text */
 .gold {
-  color: gold;
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212,175,55,0.5);
 }
 
+/* Button */
 .btn {
   display: inline-block;
   margin-top: 20px;
-  padding: 12px 25px;
-  background: gold;
+  padding: 12px 30px;
+  background: linear-gradient(45deg, #d4af37, #f6e27a);
   color: black;
   text-decoration: none;
   border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Card (glass effect) */
 .container {
-  padding: 40px;
-  text-align: center;
+  margin: 40px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
+/* Buttons */
 button {
   padding: 10px 15px;
   margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #d4af37;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
 }
