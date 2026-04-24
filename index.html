@@ -1,18 +1,186 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Wedding</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding Invitation</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  color: white;
+
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+  url('https://images.unsplash.com/photo-1520857014576-2c4f4c972b57') center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+/* Section */
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Names */
+.names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #d4af37;
+}
+
+/* Gold */
+.gold {
+  color: #d4af37;
+}
+
+/* Card */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Button */
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, gold, #f6e27a);
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* Buttons */
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  background: gold;
+  color: black;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Mobile */
+@media(max-width:600px) {
+  .names {
+    font-size: 2.2rem;
+  }
+}
+</style>
+
 </head>
-<body class="center">
 
-<h1 class="gold">Shuhaib</h1>
-<h2>&</h2>
-<h1 class="gold">Partner</h1>
+<body>
 
-<p>We Invite You To Our Wedding</p>
+<!-- 🔹 SECTION 1 -->
+<section class="section">
+  <div>
+    <h1 class="names">Groom & Bride</h1>
+    <p>We Invite You To Our Wedding</p>
+    <a href="#invite" class="btn">Open Invitation ↓</a>
+  </div>
+</section>
 
-<a href="invite.html" class="btn">Open Invitation</a>
+<!-- 🔹 SECTION 2 -->
+<section class="section" id="invite">
+  <div class="card">
+
+    <h2 class="gold">Wedding Invitation</h2>
+
+    <p>
+      With the blessings of our families,  
+      we cordially invite you and your loved ones  
+      to celebrate the wedding of  
+
+      <br><br>
+      <strong>Groom & Bride</strong>  
+
+      <br><br>
+      Your presence will add joy and happiness  
+      to our special day.  
+      We look forward to celebrating together.
+    </p>
+
+    <hr>
+
+    <h3>Will you attend?</h3>
+
+    <button onclick="yes()">Yes</button>
+    <button onclick="no()">No</button>
+
+    <div id="countBox" style="display:none;">
+      <p>How many members from your family?</p>
+
+      <button onclick="decrease()">-</button>
+      <span id="count">1</span>
+      <button onclick="increase()">+</button>
+    </div>
+
+    <br>
+
+    <a href="#location" class="btn">Next ↓</a>
+
+  </div>
+</section>
+
+<!-- 🔹 SECTION 3 -->
+<section class="section" id="location">
+  <div class="card">
+
+    <h2 class="gold">Wedding Location</h2>
+
+    <iframe 
+      src="https://www.google.com/maps?q=Kerala&output=embed"
+      width="100%" height="250" style="border-radius:10px; border:none;">
+    </iframe>
+
+    <p>We are waiting for you ❤️</p>
+
+  </div>
+</section>
+
+<script>
+let count = 1;
+
+function yes() {
+  document.getElementById("countBox").style.display = "block";
+}
+
+function no() {
+  document.getElementById("countBox").style.display = "none";
+}
+
+function increase() {
+  count++;
+  document.getElementById("count").innerText = count;
+}
+
+function decrease() {
+  if (count > 1) {
+    count--;
+    document.getElementById("count").innerText = count;
+  }
+}
+</script>
 
 </body>
 </html>
