@@ -1,51 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Final</title>
-
-<style>
-body{
-  background:black;
-  color:white;
-  font-family:Poppins;
-  text-align:center;
-  padding:50px;
-}
-
-.gold{color:#d4af37}
-
-.fade{
-  animation:fade 2s ease;
-}
-
-@keyframes fade{
-  from{opacity:0;transform:translateY(30px)}
-  to{opacity:1}
-}
-</style>
+<title>Invitation</title>
+<link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="fade">
+<div class="container">
 
-<h1 class="gold">Thank You ❤️</h1>
+<h2 class="gold">Wedding Invitation</h2>
 
-<p>Date: 11/10/2026</p>
-<p>Location: Perumbilav</p>
-<p>Contact: 9999999999</p>
+<p>
+ഞങ്ങളുടെ വിവാഹ ചടങ്ങിലേക്ക് നിങ്ങളെയും കുടുംബത്തെയും
+സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു.
+നിങ്ങളുടെ സാന്നിധ്യം ഞങ്ങളുടെ സന്തോഷത്തെ ഇരട്ടിയാക്കും.
+</p>
 
-<h2>Countdown</h2>
-<div id="count"></div>
+<hr>
 
-<script>
-let d=new Date("Oct 11, 2026").getTime();
-setInterval(()=>{
-let n=new Date().getTime();
-let diff=d-n;
-let days=Math.floor(diff/(1000*60*60*24));
-document.getElementById('count').innerText=days+" days left";
-},1000);
-</script>
+<h3>Will you attend?</h3>
+
+<button onclick="yes()">Yes</button>
+<button onclick="no()">No</button>
+
+<div id="countBox" style="display:none;">
+  <p>How many members?</p>
+
+  <button onclick="decrease()">-</button>
+  <span id="count">1</span>
+  <button onclick="increase()">+</button>
+</div>
+
+<br><br>
+
+<a href="location.html" class="btn">Next</a>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
