@@ -1,43 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Invitation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding Confirmation</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-<div class="container">
+<div class="hero">
 
-<h2 class="gold">Wedding Invitation</h2>
+    <div class="overlay"></div>
 
-<p>
-ഞങ്ങളുടെ വിവാഹ ചടങ്ങിലേക്ക് നിങ്ങളെയും കുടുംബത്തെയും
-സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു.
-നിങ്ങളുടെ സാന്നിധ്യം ഞങ്ങളുടെ സന്തോഷത്തെ ഇരട്ടിയാക്കും.
-</p>
+    <div class="form-card">
 
-<hr>
+        <h2>
+            Wedding Confirmation
+        </h2>
 
-<h3>Will you attend?</h3>
+        <form action="success.html">
 
-<button onclick="yes()">Yes</button>
-<button onclick="no()">No</button>
+            <div class="input-box">
+                <label>Your Name</label>
+                <input type="text" required>
+            </div>
 
-<div id="countBox" style="display:none;">
-  <p>How many members?</p>
+            <div class="input-box">
+                <label>How Many Persons?</label>
 
-  <button onclick="decrease()">-</button>
-  <span id="count">1</span>
-  <button onclick="increase()">+</button>
+                <select required>
+                    <option>1 Person</option>
+                    <option>2 Persons</option>
+                    <option>3 Persons</option>
+                    <option>4 Persons</option>
+                    <option>5+ Persons</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>Family Members</label>
+
+                <textarea placeholder="Family member names..."></textarea>
+            </div>
+
+            <div class="input-box">
+                <label>Location</label>
+
+                <input type="text" required>
+            </div>
+
+            <div class="input-box">
+                <label>Message For Couple</label>
+
+                <textarea placeholder="Your wishes..."></textarea>
+            </div>
+
+            <button type="submit">
+                CONFIRM ATTENDANCE
+            </button>
+
+        </form>
+
+    </div>
+
 </div>
-
-<br><br>
-
-<a href="location.html" class="btn">Next</a>
-
-</div>
-
-<script src="script.js"></script>
 
 </body>
 </html>
